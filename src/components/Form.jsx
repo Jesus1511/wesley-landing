@@ -1,7 +1,14 @@
 import React, { useContext, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../appContext'
+
 import { validateContactForm } from '../utils/validation'
+
+const screenSize = {
+  width: window.innerWidth,
+  height: window.innerHeight
+}
+
 
 import '../styles/form.css'
 
@@ -86,19 +93,18 @@ export default function Form() {
       {/* Video Section */}
       <div className="video-section">
         <div className="flex justify-center">
-          <h1 className="form-name">
-            Avere a disposizione un team come il nostro... <span className="highlight">non è per tutti!</span>
-          </h1>
-          <iframe 
-            className="form-video"
-            width="480"
-            height="280"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+
+        <iframe
+          className="form-video"
+          width={screenSize.width < 600 ? screenSize.width * 0.95 : 600}
+          height={screenSize.width < 600 ? screenSize.width * 0.5625 * 0.95 : 600 * 0.5625}
+          src="https://www.youtube.com/embed/ddV84sdSCvU"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+
         </div>
       </div>
 

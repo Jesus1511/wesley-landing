@@ -331,6 +331,7 @@
 
 .video-section {
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .forms-section {
@@ -708,4 +709,75 @@
 .form-submit-btn.loading:hover {
   transform: none;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Waitlist Specific Styles */
+.waitlist-description {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.form-title h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #515151;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.3px;
+}
+
+.form-title h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #666666;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.2px;
+}
+
+/* Mobile Responsive Styles for Waitlist */
+@media (max-width: 480px) {
+  .waitlist-description {
+    font-size: 13px;
+    margin-top: 6px;
+    padding: 0 8px;
+  }
+
+  .form-title h1 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .form-title h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .form-title {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .waitlist-description {
+    font-size: 12px;
+    margin-top: 4px;
+    padding: 0 4px;
+  }
+
+  .form-title h1 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .form-title h2 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .form-title {
+    padding: 0 4px;
+  }
 }

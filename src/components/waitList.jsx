@@ -46,9 +46,7 @@ export default function WaitList() {
       // Check if email already exists in waitlist
       const waitlistRef = collection(db, 'waitlist');
       const emailSnapshot = await getDocs(query(waitlistRef, where('email', '==', email)));
-      alert(emailSnapshot.empty);
       if (!emailSnapshot.empty) {
-        alert("Esiste già una richiesta con questa email nella lista d'attesa.");
         setError("Esiste già una richiesta con questa email nella lista d'attesa.");
         setLoading(false);
         return;
@@ -155,7 +153,7 @@ export default function WaitList() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="form-actions">
+          <div className="form-actions">
             <button 
               type="submit" 
               className={`form-submit-btn ${loading ? "loading" : ""}`}
@@ -171,7 +169,7 @@ export default function WaitList() {
             >
               ← Torna alla Home
             </button>
-          </form>
+          </div>
         </form>
       </div>
     </div>
